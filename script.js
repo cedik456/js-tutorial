@@ -14,6 +14,8 @@ let drinks = "coffee"; */
 
 // const { even } = require("prelude-ls");
 
+// const { even } = require("prelude-ls");
+
 // import { yellow } from "color-name";
 
 // import { create } from "file-entry-cache";
@@ -1995,28 +1997,48 @@ for(let people of names) {
 
 // });
 
-document.addEventListener("keydown", event => {
-  console.log(event.key);
+// document.addEventListener("keydown", event => {
+//   console.log(event.key);
 
-  if(event.key.startsWith("Arrow")){
-    switch(event.key){
-      case "ArrowUp":
-        console.log("Up arrow key pressed");
-        break;
+//   if(event.key.startsWith("Arrow")){
+//     switch(event.key){
+//       case "ArrowUp":
+//         console.log("Up arrow key pressed");
+//         break;
       
-      case "ArrowDown":
-        console.log("Down arrow key pressed");
-        break;
+//       case "ArrowDown":
+//         console.log("Down arrow key pressed");
+//         break;
 
-      case "ArowLeft":
-        console.log("Left arrow ky pressed");
-        break;
+//       case "ArowLeft":
+//         console.log("Left arrow ky pressed");
+//         break;
 
-      case "ArowRight":
-        console.log("Right arrow key pressed");
-    }
-  }
-});
+//       case "ArowRight":
+//         console.log("Right arrow key pressed");
+//         break;
+//     }
+//   }
+// });
+
+// SHOW AND HIDE HTML ELEMENTS 
+
+// const myButton = document.getElementById("myButton");
+// const myImg = document.getElementById("myImg");
+
+
+// myButton.addEventListener("click", event => {
+
+//   if(myImg.style.visibility === "hidden"){ 
+//     myImg.style.visibility = "visible";
+//     myButton.textContent = "hide";
+//   }
+//   else{
+//     myImg.style.visibility = "hidden";
+//     myButton.textContent = "Show";
+//   }
+
+// });
 
 
 

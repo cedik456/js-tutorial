@@ -96,9 +96,9 @@ img {
 }
 
 button {
-  background-color: #4CAF50; /* Green background */
+  background-color: blue; /* Green background */
   border: none; /* Remove border */
-  color: white; /* White text */
+  color: hsl(0, 0%, 70%); /* White text */
   padding: 15px 32px; /* Some padding */
   text-align: center; /* Centered text */
   text-decoration: none; /* Remove underline */
@@ -108,6 +108,21 @@ button {
   cursor: pointer; /* Pointer/hand icon */
   border-radius: 8px; /* Rounded corners */
   transition: background-color 0.3s; /* Smooth transition */
+}
+
+.enabled{
+  background-color: yellow;
+  color: black;
+}
+
+.hover{
+  background-color: red;
+  color: white;
+}
+
+.disabled{
+  background-color: gray;
+  color: black;
 }
 
 /* button{

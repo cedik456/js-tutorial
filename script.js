@@ -12,10 +12,6 @@ let drinks = "coffee"; */
 
 // const { even } = require("prelude-ls");
 
-// const { even } = require("prelude-ls");
-
-// const { even } = require("prelude-ls");
-
 // import { yellow } from "color-name";
 
 // import { create } from "file-entry-cache";
@@ -2039,6 +2035,196 @@ for(let people of names) {
 //   }
 
 // });
+
+// NODE LIST (wont update automatically) ---------------------------------------
+
+// let buttons = document.querySelectorAll(".myButtons");
+
+// buttons.forEach(button => {
+//   button.style.backgroundColor = "yellow";
+//   button.textContent += "Click here"; (Append)
+//   button.textContent = "Click here"; (Replace)
+// });
+
+// event listeners
+
+// buttons.forEach(button => {
+//   button.addEventListener("click", event => {
+//     event.target.style.backgroundColor = "red"
+//   });
+// });
+
+// mouseover and mouseout
+
+// buttons.forEach(button => {
+//   button.addEventListener("mouseover", event => {
+//     event.target.style.backgroundColor = "red";
+//   });
+// });
+
+// buttons.forEach(button => {
+//   button.addEventListener("mouseout", event => {
+//     event.target.style.backgroundColor = "#4CAF50";
+//   });
+// });
+
+// add an element
+
+// const newButton = document.createElement("button");
+
+// newButton.textContent = "button 5";
+// newButton.classList = "myButtons";
+
+// document.body.append(newButton);
+
+// buttons = document.querySelectorAll(".myButtons");
+
+// console.log(buttons);
+
+// const addHoverEffect = button => {
+
+//   button.addEventListener("mouseover", event => {
+//     event.target.style.backgroundColor = "red";
+//   });
+
+//   button.addEventListener("mouseout", event => {
+//     event.target.style.backgroundColor = "#4CAF50";
+//   });
+
+// };
+
+// let buttons = document.querySelectorAll(".myButtons");
+
+// buttons.forEach(button => addHoverEffect(button));
+
+// const newButton = document.createElement("button");
+
+// newButton.textContent = "button5";
+// newButton.classList.add = "myButtons";
+
+// document.body.append(newButton);
+
+// addHoverEffect(newButton);
+
+// remove an element 
+
+// buttons.forEach(button => {
+//   button.addEventListener("click", event => {
+//     event.target.remove();
+//     buttons = document.querySelectorAll(".myButtons");
+//     console.log(buttons);
+//   });
+// });
+
+
+// CLASS LIST ------------------------------------------------------\\
+
+// const buttons = Array.from(document.getElementsByClassName("myButtons"));
+
+// buttons.forEach(button => {
+//     button.classList.add("enabled");
+// });
+
+// const myButtons = document.getElementById("myButtons");
+
+// add & remove
+
+// myButtons.addEventListener("mouseover", event => {
+//    event.target.classList.add("hover");
+// });
+
+// myButtons.addEventListener("mouseout", event => {
+//   event.target.classList.remove("hover");
+// });
+
+// toggle (Remove if present, Add if not)
+
+// myButtons.addEventListener("mouseover", event => {
+//   event.target.classList.toggle("hover");
+// });
+
+// myButtons.addEventListener("mouseout", event => {
+//   event.target.classList.toggle("hover");
+// });
+
+// replace (oldClass, newClass)
+
+// myButtons.classList.add("enabled");
+
+// myButtons.addEventListener("click", event => {
+//   event.target.classList.replace("enabled", "disabled");
+// });
+
+// contains 
+
+// myButtons.addEventListener("click", event => {
+
+//     if(event.target.classList.contains("disabled")){
+//       event.target.textContent = "This is disabled";
+//     }else{
+//       event.target.classList.replace("enabled", "disabled");
+//     }
+// });
+
+// const myH1 = document.getElementById("myH1");
+
+
+// myH1.classList.add("enabled");
+
+// myH1.addEventListener("click", event => {
+
+//   if(event.target.classList.contains("disabled")){
+//     event.target.textContent = "This is disabled!";
+//   }
+//   else{
+//    event.target.classList.replace("enabled", "disabled");
+//   }
+// });
+
+// NODELIST & CLASS LIST ----------------------------------------
+
+const buttons = document.querySelectorAll(".myButtons");
+
+buttons.forEach(button => {
+  button.addEventListener("click", event => {
+    event.target.classList.add("enabled");
+  });
+});
+
+// buttons.forEach(button => {
+//   button.addEventListener("click", event => {
+//     event.target.classList.remove("enabled");
+//   });
+// });
+
+buttons.forEach(button => {
+  button.addEventListener("mouseover", event => {
+    event.target.classList.toggle("hover")
+  });
+});
+
+buttons.forEach(button => {
+  button.addEventListener("mouseout", event => {
+    event.target.classList.toggle("hover")
+  });
+});
+
+buttons.forEach(button => {
+  button.addEventListener("click", event => {
+
+    if(event.target.classList.contains("disabled")){
+      event.target.textContent += "😒";
+    }
+    else{
+      event.target.classList.replace("enabled", "disabled");
+    }
+  });
+});
+
+
+
+
+
 
 
 

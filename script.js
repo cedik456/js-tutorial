@@ -2183,13 +2183,13 @@ for(let people of names) {
 
 // NODELIST & CLASS LIST ----------------------------------------
 
-const buttons = document.querySelectorAll(".myButtons");
+// const buttons = document.querySelectorAll(".myButtons");
 
-buttons.forEach(button => {
-  button.addEventListener("click", event => {
-    event.target.classList.add("enabled");
-  });
-});
+// buttons.forEach(button => {
+//   button.addEventListener("click", event => {
+//     event.target.classList.add("enabled");
+//   });
+// });
 
 // buttons.forEach(button => {
 //   button.addEventListener("click", event => {
@@ -2197,29 +2197,89 @@ buttons.forEach(button => {
 //   });
 // });
 
-buttons.forEach(button => {
-  button.addEventListener("mouseover", event => {
-    event.target.classList.toggle("hover")
-  });
-});
+// buttons.forEach(button => {
+//   button.addEventListener("mouseover", event => {
+//     event.target.classList.toggle("hover")
+//   });
+// });
 
-buttons.forEach(button => {
-  button.addEventListener("mouseout", event => {
-    event.target.classList.toggle("hover")
-  });
-});
+// buttons.forEach(button => {
+//   button.addEventListener("mouseout", event => {
+//     event.target.classList.toggle("hover")
+//   });
+// });
 
-buttons.forEach(button => {
-  button.addEventListener("click", event => {
+// buttons.forEach(button => {
+//   button.addEventListener("click", event => {
 
-    if(event.target.classList.contains("disabled")){
-      event.target.textContent += "😒";
+//     if(event.target.classList.contains("disabled")){
+//       event.target.textContent += "😒";
+//     }
+//     else{
+//       event.target.classList.replace("enabled", "disabled");
+//     }
+//   });
+// });
+
+// ROCK, PAPER AND SCISSORS 
+
+const choices = ["rock", "paper", "scissors"];
+
+const playerDisplay = document.getElementById("playerDisplay");
+const computerDisplay = document.getElementById("computerDisplay");
+const resultDisplay = document.getElementById("resultDisplay");
+const playerScoreDisplay = document.getElementById("playerScoreDisplay");
+const computerScoreDisplay = document.getElementById("computerScoreDisplay");
+
+let playerScore = 0;
+let computerScore = 0;
+
+function playGame(playerChoice) {
+
+    const computerChoice = choices[Math.floor(Math.random() * 3)];
+    let result = "";
+
+    if(playerChoice === computerChoice){
+      result = "ITS A TIE !!";
     }
     else{
-      event.target.classList.replace("enabled", "disabled");
+      switch(playerChoice){
+        case "rock":
+         result = (computerChoice === "scissors") ? "YOU WIN!" : "YOU LOSE!";
+         break;
+
+        case "paper":
+         result = (computerChoice === "rock") ? "YOU WIN!" : "YOU LOSE!";
+         break;
+
+        case "scissors":
+         result = (computerChoice === "paper") ? "YOU WIN!" : "YOU LOSE!";
+         break;
+      }
     }
-  });
-});
+
+    playerDisplay.textContent = `PLAYER: ${playerChoice}`;
+    computerDisplay.textContent = `COMPUTER: ${computerChoice}`;
+    resultDisplay.textContent = result;
+
+    resultDisplay.classList.remove("greenText", "redText");
+
+    switch(result){
+      case "YOU WIN!":
+        resultDisplay.classList.add("greenText");
+        playerScore++;
+        playerScoreDisplay.textContent = playerScore;
+        break;
+
+      case "YOU LOSE!":
+        resultDisplay.classList.add("redText");
+        computerScore++;
+        computerScoreDisplay.textContent = computerScore;
+        break;
+    }
+}
+
+
 
 
 

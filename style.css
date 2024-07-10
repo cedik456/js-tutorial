@@ -96,7 +96,7 @@ img {
 }
 
 button {
-  background-color: blue; /* Green background */
+  background-color: black; /* Green background */
   border: none; /* Remove border */
   color: hsl(0, 0%, 70%); /* White text */
   padding: 15px 32px; /* Some padding */
@@ -110,19 +110,23 @@ button {
   transition: background-color 0.3s; /* Smooth transition */
 }
 
-.enabled{
-  background-color: yellow;
-  color: black;
+.greenText,
+#playerScoreDisplay{
+  color: hsl(120, 68%, 42%);;
 }
 
-.hover{
-  background-color: red;
-  color: white;
+.redText,
+#computerScoreDisplay{
+  color: hsl(0, 91%, 39%);
 }
 
 .disabled{
   background-color: gray;
   color: black;
+}
+
+#resultDisplay{
+  font-size: 3rem;
 }
 
 /* button{

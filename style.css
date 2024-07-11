@@ -91,9 +91,9 @@ body {
   position: relative;
 }
 
-img {
+/* img {
   width: 400px;
-}
+} */
 
 button {
   background-color: black; /* Green background */
@@ -110,7 +110,7 @@ button {
   transition: background-color 0.3s; /* Smooth transition */
 }
 
-.greenText,
+/* .greenText,
 #playerScoreDisplay{
   color: hsl(120, 68%, 42%);;
 }
@@ -127,6 +127,56 @@ button {
 
 #resultDisplay{
   font-size: 3rem;
+} */
+
+.slides{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+
+.slider{
+  position: relative;
+  width: 50%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider img{
+  width: 40%;
+  display: none;
+}
+
+img.displaySlide{
+  display: block;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.slider button{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.prev{
+  left: 0;
+}
+
+.next{
+  right: 0;
+}
+
+@keyframes fade{
+  from {opacity: .5}
+  to {opacity: 1;}
 }
 
 /* button{

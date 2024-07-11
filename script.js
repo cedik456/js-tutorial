@@ -4,6 +4,11 @@ let p2 = "David";
 let gender = "she";
 let drinks = "coffee"; */
 
+// const { values } = require("prelude-ls");
+
+// const { reject, values } = require("prelude-ls");
+// const { resolve } = require("uri-js");
+
 // const { even } = require("prelude-ls");
 
 // const { even } = require("prelude-ls");
@@ -2223,61 +2228,242 @@ for(let people of names) {
 
 // ROCK, PAPER AND SCISSORS 
 
-const choices = ["rock", "paper", "scissors"];
+// const choices = ["rock", "paper", "scissors"];
 
-const playerDisplay = document.getElementById("playerDisplay");
-const computerDisplay = document.getElementById("computerDisplay");
-const resultDisplay = document.getElementById("resultDisplay");
-const playerScoreDisplay = document.getElementById("playerScoreDisplay");
-const computerScoreDisplay = document.getElementById("computerScoreDisplay");
+// const playerDisplay = document.getElementById("playerDisplay");
+// const computerDisplay = document.getElementById("computerDisplay");
+// const resultDisplay = document.getElementById("resultDisplay");
+// const playerScoreDisplay = document.getElementById("playerScoreDisplay");
+// const computerScoreDisplay = document.getElementById("computerScoreDisplay");
 
-let playerScore = 0;
-let computerScore = 0;
+// let playerScore = 0;
+// let computerScore = 0;
 
-function playGame(playerChoice) {
+// function playGame(playerChoice) {
 
-    const computerChoice = choices[Math.floor(Math.random() * 3)];
-    let result = "";
+//     const computerChoice = choices[Math.floor(Math.random() * 3)];
+//     let result = "";
 
-    if(playerChoice === computerChoice){
-      result = "ITS A TIE !!";
-    }
-    else{
-      switch(playerChoice){
-        case "rock":
-         result = (computerChoice === "scissors") ? "YOU WIN!" : "YOU LOSE!";
-         break;
+//     if(playerChoice === computerChoice){
+//       result = "ITS A TIE !!";
+//     }
+//     else{
+//       switch(playerChoice){
+//         case "rock":
+//          result = (computerChoice === "scissors") ? "YOU WIN!" : "YOU LOSE!";
+//          break;
 
-        case "paper":
-         result = (computerChoice === "rock") ? "YOU WIN!" : "YOU LOSE!";
-         break;
+//         case "paper":
+//          result = (computerChoice === "rock") ? "YOU WIN!" : "YOU LOSE!";
+//          break;
 
-        case "scissors":
-         result = (computerChoice === "paper") ? "YOU WIN!" : "YOU LOSE!";
-         break;
-      }
-    }
+//         case "scissors":
+//          result = (computerChoice === "paper") ? "YOU WIN!" : "YOU LOSE!";
+//          break;
+//       }
+//     }
 
-    playerDisplay.textContent = `PLAYER: ${playerChoice}`;
-    computerDisplay.textContent = `COMPUTER: ${computerChoice}`;
-    resultDisplay.textContent = result;
+//     playerDisplay.textContent = `PLAYER: ${playerChoice}`;
+//     computerDisplay.textContent = `COMPUTER: ${computerChoice}`;
+//     resultDisplay.textContent = result;
 
-    resultDisplay.classList.remove("greenText", "redText");
+//     resultDisplay.classList.remove("greenText", "redText");
 
-    switch(result){
-      case "YOU WIN!":
-        resultDisplay.classList.add("greenText");
-        playerScore++;
-        playerScoreDisplay.textContent = playerScore;
-        break;
+//     switch(result){
+//       case "YOU WIN!":
+//         resultDisplay.classList.add("greenText");
+//         playerScore++;
+//         playerScoreDisplay.textContent = playerScore;
+//         break;
 
-      case "YOU LOSE!":
-        resultDisplay.classList.add("redText");
-        computerScore++;
-        computerScoreDisplay.textContent = computerScore;
-        break;
-    }
-}
+//       case "YOU LOSE!":
+//         resultDisplay.classList.add("redText");
+//         computerScore++;
+//         computerScoreDisplay.textContent = computerScore;
+//         break;
+//     }
+// }
+
+// IMAGE SLIDER ---------------------------------------
+
+// const slides = document.querySelectorAll(".slides img");
+// let slideIndex = 0;
+// let intervalId = null;
+
+// // initializeSlider();
+// document.addEventListener("DOMContentLoaded", initializeSlider);
+
+// function initializeSlider(){
+
+//     if(slides.length > 0){
+//       slides[slideIndex].classList.add("displaySlide");
+//       intervalId = setInterval(nextSlide, 5000);
+//     }
+//     // console.log(intervalId);
+// }
+
+// function showSlide(index){
+
+//     if(index >= slides.length){
+//       slideIndex = 0;
+//     }
+//     else if(index < 0){
+//       slideIndex = slides.length - 1;
+//     }
+
+//     slides.forEach(slide => {
+//       slide.classList.remove("displaySlide");
+//     });
+//     slides[slideIndex].classList.add("displaySlide");
+
+// }
+
+// function prevSlide(){
+
+//     clearInterval(intervalId);
+//     slideIndex--;
+//     showSlide(slideIndex);
+// }
+
+// function nextSlide(){
+
+//     slideIndex++;
+//     showSlide(slideIndex);
+
+// }
+
+// CALLBACK HELL (AVOID IT AS MUCH AS POSSIBLE) --------------------------------------------------
+
+// function task1(callback){
+//   setTimeout(() => {
+//     console.log("Task 1 Complete");
+//     callback();
+//   }, 2000);
+  
+// }
+
+// function task2(callback){
+//   setTimeout(() => {
+//     console.log("Task 2 Complete");
+//     callback();
+//   }, 1500);
+// }
+
+// function task3(callback){
+//   setTimeout(() => {
+//     console.log("Task 3 Complete");
+//     callback();
+//   }, 2500);
+// }
+
+// function task4(callback){
+//   setTimeout(() => {
+//     console.log("Task 4 Complete");
+//     callback();
+//   }, 4000);
+// }
+
+
+// task1(() => {
+//   task2(() => {
+//     task3(() => {
+//       task4(() => {
+//         console.log("All tasks are complete!");
+//       });
+//     });
+//   });
+// });
+
+// console.log("All tasks are complete");
+
+// PROMISES --------------------------------------------------
+
+// WALK THE DOG
+// CLEAN THE KITCHEN
+// TAKE OUT THE TRASH
+
+// function walkDog(){
+
+//     return new Promise((resolve, reject) => {
+//       setTimeout(() => {
+
+//         const dogWalked = true;
+
+//         if(dogWalked){
+//           resolve("You walk the dog!");
+//         }
+//         else{
+//           reject("You DIDN'T walked the dog!")
+//         }
+        
+//       }, 2000)
+//     });
+// };
+
+// function cleanKitchen(){
+
+//     return new Promise((resolve, reject) => {
+//       setTimeout(() => {
+        
+//         const kitchenCleaned = true;
+
+//         if(kitchenCleaned){
+//           resolve("You clean the kitchen!");
+//         }
+//         else{
+//           reject("You DIDN'T clean the kitchen!")
+//         }
+
+//       }, 2500)
+//     });
+// };
+
+// function takeOutTrash(){
+  
+//     return new Promise((resolve, reject) => {
+//       setTimeout(() => {
+        
+//         const trashTakenOut = true;
+
+//         if(trashTakenOut){
+//           resolve("You take out all the trash!");
+//         }
+//         else{
+//           reject("You DIDN'T take out all the trash!")
+//         }
+
+//       }, 500);
+//     });
+// }
+
+// // walkDog().then(value => {console.log(value); return cleanKitchen()})
+// //          .then(value => {console.log(value); return takeOutTrash()})
+// //          .then(value => {console.log(value); console.log("You finished all the chores")})
+// //          .catch(error => console.error(error));
+
+// async function doChores(){
+
+
+//     try{
+//       const walkDogResult = await walkDog();
+//       console.log(walkDogResult);
+  
+//       const takeOutTrashResult = await takeOutTrash();
+//       console.log(takeOutTrashResult);
+  
+//       const cleanKitchenResult = await cleanKitchen();
+//       console.log(cleanKitchenResult);
+
+//       console.log("You finished all the chores!")
+//     }
+//     catch(error){
+//       console.log(error);
+//     }
+// }
+
+// doChores();
+
+
 
 
 

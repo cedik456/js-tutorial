@@ -6,6 +6,8 @@ let drinks = "coffee"; */
 
 // const { values } = require("prelude-ls");
 
+// const { values } = require("prelude-ls");
+
 // const { reject, values } = require("prelude-ls");
 // const { resolve } = require("uri-js");
 
@@ -2441,6 +2443,8 @@ for(let people of names) {
 // //          .then(value => {console.log(value); console.log("You finished all the chores")})
 // //          .catch(error => console.error(error));
 
+// ASYNC AND AWAIT ------------------------------------------------------------
+
 // async function doChores(){
 
 
@@ -2462,6 +2466,54 @@ for(let people of names) {
 // }
 
 // doChores();
+
+// JSON (JavaScript Object Notation) ----------------------------------------------------
+
+// const names = ["Cedric", "Charles", "Emman", "Majo"];
+// const person = {
+//   "name": "Cedric",
+//   "age" : 30,
+//   "isEmployed": true,
+//   "hobbies": ["Reading", "Working out", "Watching Movies"]
+// }
+// const people = `[
+//   {
+//     "name": "Cedric",
+//     "age" : 22,
+//     "isEmployed": true,
+//     "hobbies": ["Reading", "Working out", "Coding"]
+//   },
+
+//   {
+//     "name": "Emman",
+//     "age" : 20,
+//     "isEmployed": true,
+//     "hobbies": ["Reading", "Working out", "Computer Games"]
+//   },
+
+//   {
+//     "name": "James",
+//     "age" : 21,
+//     "isEmployed": true,
+//     "hobbies": ["Reading", "Working out", "Editing"]
+//   },
+
+//   {
+//     "name": "Charles",
+//     "age" : 23,
+//     "isEmployed": true,
+//     "hobbies": ["Eating", "Computer Games", "Watching Anime"]
+//   }
+// ]`
+
+// // const stringJson = JSON.stringify(people);
+// const jsonParse = JSON.parse(people)
+
+// console.log(jsonParse);
+
+// FETCH ---------------------------------------------------
+
+fetch("names.json").then(response => response.json()).then(values => console.log(values))
 
 
 

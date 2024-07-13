@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Cedric",
+    "age" : 22,
+    "isEmployed": true,
+    "hobbies": ["Reading", "Working out", "Coding"]
+  },
+
+  {
+    "name": "Emman",
+    "age" : 20,
+    "isEmployed": true,
+    "hobbies": ["Reading", "Working out", "Computer Games"]
+  },
+
+  {
+    "name": "James",
+    "age" : 21,
+    "isEmployed": true,
+    "hobbies": ["Reading", "Working out", "Editing"]
+  },
+
+  {
+    "name": "Charles",
+    "age" : 23,
+    "isEmployed": true,
+    "hobbies": ["Eating", "Computer Games", "Watching Anime"]
+  }
+]

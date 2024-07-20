@@ -81,3 +81,49 @@
 // username = window.prompt("What's your username?");
 
 // console.log(username);
+
+// BRO CODE *****
+
+// JSON (JavaScript Object Notation) ----------------------------------------------------
+
+// const names = ["Cedric", "Charles", "Emman", "Majo"];
+// const person = {
+//   "name": "Cedric",
+//   "age" : 30,
+//   "isEmployed": true,
+//   "hobbies": ["Reading", "Working out", "Watching Movies"]
+// }
+// const people = `[
+//   {
+//     "name": "Cedric",
+//     "age" : 22,
+//     "isEmployed": true,
+//     "hobbies": ["Reading", "Working out", "Coding"]
+//   },
+
+//   {
+//     "name": "Emman",
+//     "age" : 20,
+//     "isEmployed": true,
+//     "hobbies": ["Reading", "Working out", "Computer Games"]
+//   },
+
+//   {
+//     "name": "James",
+//     "age" : 21,
+//     "isEmployed": true,
+//     "hobbies": ["Reading", "Working out", "Editing"]
+//   },
+
+//   {
+//     "name": "Charles",
+//     "age" : 23,
+//     "isEmployed": true,
+//     "hobbies": ["Eating", "Computer Games", "Watching Anime"]
+//   }
+// ]`
+
+// // const stringJson = JSON.stringify(people);
+// const jsonParse = JSON.parse(people)
+
+// console.log(jsonParse);

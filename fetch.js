@@ -1,11 +1,32 @@
 // FETCH ---------------------------------------------------
 
+// const { values } = require("prelude-ls")
+
 // 1. Fetch json files
 
 // fetch("person.json")
 //     .then(response => response.json())
 //     .then(values => values.for)
 //     .catch(error => console.error(error))
+
+fetch('people.json')
+    .then(response => {
+
+        if(!response.ok){
+            throw new Error('Network response was not ok')
+        }
+        return response.json();
+    })
+    .then(data => {
+        
+        console.log(data);
+        // document.getElementById('display').textContent = JSON.stringify(data, null, 2);
+    })
+    .catch(error => {
+
+        console.error('There has been a problem with your fetch operation:' ,error);
+    })
+
 
 // 2. Fetch http requests
 
